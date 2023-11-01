@@ -1,0 +1,52 @@
+<!--
+  @description       : 
+  @author            : Sudhir Kumar Thanna
+  @group             : 
+  @last modified on  : 10-31-2023
+  @last modified by  : Sudhir Kumar Thanna
+-->
+<template>
+
+  <lightning-card title="Search And Filter Accounts - Solution 1">
+    <p>Dynamic Filter without using search button</p>
+    <div class="slds-m-around_medium">
+      <lightning-input type="search" label="Search" onchange={handleSearchName} class="slds-m-bottom_small" value={handleSearchName} ></lightning-input>
+    </div>
+    
+    <template if:true={accountList}>
+      <p>Found {recordsSize} Records to Display</p>   
+      <lightning-datatable
+                 key-field="id"
+                 data={accountList}
+                 columns={columns}>
+         </lightning-datatable>
+    </template>
+    <template if:false={accountList}>
+      <p>{recordsSize} - No Records to Display</p>
+    </template>
+  </lightning-card>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <lightning-card title="Search And Filter Accounts - Solution 2">
+    <p>Standard Filter using search button</p>
+    <div class="slds-m-around_medium">
+      <lightning-input type="search" label="Search" onchange={handleSearchName2} class="slds-m-bottom_small" value={handleSearchName2} ></lightning-input>
+      <lightning-button variant="brand" name="search" label="Search" onclick={handleSearchBtn} ></lightning-button>
+    </div>
+    
+    <template if:true={accountList2}>
+      <p>Found {recordsSize2} Records to Display</p>   
+      <lightning-datatable
+                 key-field="id"
+                 data={accountList2}
+                 columns={columns}>
+         </lightning-datatable>
+    </template>
+    <template if:false={accountList2}>
+      <p>{recordsSize2} - No Records to Display</p>
+    </template>
+  </lightning-card>
+</template>
