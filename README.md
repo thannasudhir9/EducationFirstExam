@@ -104,3 +104,12 @@ DEPLOY PROGRESS | ████████████████████�
 Deploy Succeeded.
 
 PS C:\Users\STK\Downloads\EducationFirstExam> 
+
+
+Tool: https://githubsfdeploy.herokuapp.com/
+Deployment:
+
+<a href="https://githubsfdeploy.herokuapp.com?owner=Sudhir Kumar Thanna&repo=EducationFirstExam&ref=main">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
